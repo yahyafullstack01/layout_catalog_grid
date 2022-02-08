@@ -1,12 +1,11 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
 
   max-width: 944px;
-  margin: 0 auto;
-
+  gap: 48px;
   &__card {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     width: 200px;
@@ -18,5 +17,16 @@
 
   &__card:not(:nth-child(4n)) {
     margin-right: 48px;
+  }
+}
+@media (max-width:768px) {
+  .catalog {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (max-width:488px) {
+  .catalog {
+    grid-template-columns: repeat(2, auto);
   }
 }
