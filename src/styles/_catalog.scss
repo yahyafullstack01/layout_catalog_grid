@@ -1,9 +1,8 @@
 .catalog {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  margin: 0 auto;
-
   max-width: 944px;
+  margin: auto;
   gap: 48px;
   &__card {
     display: grid;
@@ -13,11 +12,6 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
-  }
-
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
   }
 }
 @media (max-width:768px) {
